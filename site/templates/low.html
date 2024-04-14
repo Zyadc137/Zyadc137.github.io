@@ -1,0 +1,8 @@
+
+{% extends "pictures.html" %}
+{% block title %} high quality {% endblock %}
+{% block gallery %}
+{% for image in image_filenames %}
+<img src="{{ url_for('static', filename='images/low/' + image) }}" alt="Image description" >
+{% endfor %}
+{% endblock gallery %}
